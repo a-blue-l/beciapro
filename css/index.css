@@ -327,8 +327,8 @@ img {
   height: 5.24154589rem;
 }
 .section1 .active .textShowimg1 {
-  -webkit-animation: opacity 1s 1.6s ease;
-  animation: opacity 1s 1.6s ease;
+  -webkit-animation: opacity 1s 2.5s ease;
+  animation: opacity 1s 2.5s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -339,8 +339,8 @@ img {
   animation-fill-mode: forwards;
 }
 .section1 .active .textShowimg2 {
-  -webkit-animation: opacity 1s 1.6s ease;
-  animation: opacity 1s 1.6s ease;
+  -webkit-animation: opacity 1s 2.5s ease;
+  animation: opacity 1s 2.5s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -351,8 +351,8 @@ img {
   animation-fill-mode: forwards;
 }
 .section1 .active .textShowimg3 {
-  -webkit-animation: opacity 1s 1.6s ease;
-  animation: opacity 1s 1.6s ease;
+  -webkit-animation: opacity 1s 2.5s ease;
+  animation: opacity 1s 2.5s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -515,7 +515,7 @@ img {
   width: 19.27536232rem;
   height: 25.89371981rem;
   position: absolute;
-  top: 3.382rem;
+  top: 3.38164251rem;
   left: 0rem;
   right: 0rem;
   margin: auto;

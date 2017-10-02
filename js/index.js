@@ -210,7 +210,7 @@
 						firstfalg = true;
 						$('.textShow').addClass('active');
 						textJump();
-						sectionT = setInterval(textJump,2500);
+						sectionT = setInterval(textJump,3000);
 						break;
 					case 2:
 						$('.section2 .sectContent').addClass('activeTwo');

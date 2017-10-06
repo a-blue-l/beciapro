@@ -1,7 +1,6 @@
 ;(function(){
 	$(function(){
 		var jump,jump1,adddome;
-		var sec2jump,sec2jump1,sec2add;
 		var falgtwo = false;
 		var firstfalg = true;
 		;(function(){
@@ -55,54 +54,6 @@
 				});
 			}
 		})()
-		;(function(){
-			// 电流碰撞场景
-			var secimgdots = 10;	
-			var secimgIndex = 0;		
-			var secimgIndex1 = 0;
-			var secwidthpx = $('.leftele').width();
-			var secheightpx = $('.leftele').height();
-			var secimgSrc = 'images/electricsec01.png';
-			var secdotWidth = (secwidthpx-0.2) / secimgdots;	
-			var secdotHeight = secheightpx;	
-			//设置小div进行图片切割.
-			sec2add = function(){
-				secimgIndex = 0;	
-				secimgIndex1 = 0;	
-				var divBox = '';
-				for (var i = 0;i < secimgdots;i ++) {
-					divBox += '<div class="dotboxsec" style="width:'+secdotWidth+'px;height:'+secdotHeight+'px;float:left;display:inline;background-image:url('+secimgSrc+');background-repeat:no-repeat;background-size:'+secwidthpx+'px '+secheightpx+'px;background-position:'+(-i*secdotWidth)+'px '+0+'px"></div>';
-				}
-				$(".leftele").append(divBox);
-				$(".rightele").append(divBox);
-				$(".dotboxsec").css({opacity:0});
-			}
-			sec2jump = function(){
-				$(".leftele .dotboxsec:eq("+secimgIndex+")").animate({opacity:1},50,function(){
-					$(".leftele .dotboxsec:eq("+secimgIndex+")").animate({opacity:0.5},50,function(){
-					    if(secimgIndex<secimgdots-1){
-					        secimgIndex++;
-					        sec2jump();
-					    }else{
-					    	$('#pano').addClass('panoactive');
-					        $('.leftele').empty();
-					    }
-					});
-				});
-			}
-			sec2jump1 = function(){
-				$(".rightele .dotboxsec:eq("+secimgIndex1+")").animate({opacity:1},50,function(){
-					$(".rightele .dotboxsec:eq("+secimgIndex1+")").animate({opacity:0.5},50,function(){
-					    if(secimgIndex1<secimgdots-1){
-					        secimgIndex1++;
-					        sec2jump1();
-					    }else{
-					        $('.rightele').empty();
-					    }
-					});
-				});
-			}
-		})()
 		// 转换文字
 		var number = 0;
 		var sectionT;
@@ -116,7 +67,7 @@
 						$.fn.fullpage.moveSectionDown();
 					}
 					clearTimeout(textTime);
-				},1800)
+				},2200)
 				number = 4;
 				clearInterval(sectionT);
 			}
@@ -184,8 +135,6 @@
 					case 3:
 						$('.section3 .sectContent').removeClass('activeThree');
 						$('#pano').removeClass('panoactive');
-						$('.leftele').empty();
-						$('.rightele').empty();
 					 	break;
 					case 4:
 						$('.electrictop,.electricbott').empty();
@@ -210,7 +159,7 @@
 						firstfalg = true;
 						$('.textShow').addClass('active');
 						textJump();
-						sectionT = setInterval(textJump,3000);
+						sectionT = setInterval(textJump,2600);
 						break;
 					case 2:
 						$('.section2 .sectContent').addClass('activeTwo');
@@ -218,12 +167,7 @@
 						break;
 					case 3:
 						$('.section3 .sectContent').addClass('activeThree');
-						sec2add();
-						var secTime = setTimeout(function(){
-							sec2jump();
-							sec2jump1();
-							clearTimeout(secTime);
-						},1800)
+						$('#pano').addClass('panoactive');
 						break;
 					case 4:
 						$('.section4 .sectContent').addClass('activeFour');
@@ -268,8 +212,9 @@
 			return false;
 		})
 		// 控制音乐
+		var audio = document.getElementById('audio');
+		audio.play();
 		$('.musiclogo').on('touchstart',function(){
-			var audio = document.getElementById('audio');
 			if (audio !== null) {
 				if (audio.paused) {
 					$('.musiclogo').addClass('musicact').find('img').attr('src','images/musiclogo.png');

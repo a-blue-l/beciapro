@@ -328,8 +328,8 @@ img{
 	// 动画获取
 	.active{
 		.textShowimg1{
-			-webkit-animation: opacity 1s 2.5s ease;
-					animation: opacity 1s 2.5s ease;
+			-webkit-animation: opacity 1s 1.8s ease;
+					animation: opacity 1s 1.8s ease;
 			-webkit-animation-fill-mode: forwards;
 					animation-fill-mode: forwards;
 			.text01{
@@ -340,8 +340,8 @@ img{
 			}
 		}
 		.textShowimg2{
-			-webkit-animation: opacity 1s 2.5s ease;
-					animation: opacity 1s 2.5s ease;
+			-webkit-animation: opacity 1s 1.8s ease;
+					animation: opacity 1s 1.8s ease;
 			-webkit-animation-fill-mode: forwards;
 					animation-fill-mode: forwards;
 			.text02{
@@ -352,8 +352,8 @@ img{
 			}
 		}
 		.textShowimg3{
-			-webkit-animation: opacity 1s 2.5s ease;
-					animation: opacity 1s 2.5s ease;
+			-webkit-animation: opacity 1s 1.8s ease;
+					animation: opacity 1s 1.8s ease;
 			-webkit-animation-fill-mode: forwards;
 					animation-fill-mode: forwards;
 			.text03{
@@ -423,6 +423,20 @@ img{
 						margin: auto;
 						opacity: 0;
 						background: url(../images/fingerprint.png) no-repeat center center/contain;
+					}
+					.figertext{
+						display: block;
+						width: 100%;
+						.px(height, 38);
+						.px(line-height, 38);
+						color:#fff;
+						text-align:center;
+						.px(font-size, 30);
+						position:absolute;
+						.px(bottom, 0);
+						.px(left, 0);
+						opacity: 0.5;
+						letter-spacing: 0.1rem;
 					}
 				}
 			}
@@ -597,8 +611,8 @@ img{
 					position: relative;
 				}
 				.panoactive{
-					-webkit-animation: tahn .2s linear;
-							animation: tahn .2s linear;
+					-webkit-animation: tahn .2s 1.5s linear;
+							animation: tahn .2s 1.5s linear;
 					-webkit-animation-fill-mode: forwards;
 							animation-fill-mode: forwards;
 				}
@@ -654,28 +668,7 @@ img{
 				.px(bottom, 10);
 				.px(left, 0);
 				z-index: 99;
-			}
-			.lightelec{
-				.px(width, 648);
-				.px(height, 133);
-				position:absolute;
-				.px(top, 0);
-				.px(right, 0);
-				.px(bottom, 0);
-				.px(left, 0);
-				margin: auto;
-				.leftele{
-					width: 50%;
-					height: 100%;
-					float: left;
-				}
-				.rightele{
-					width: 50%;
-					height: 100%;
-					float: left;
-					-webkit-transform: rotateY(180deg);
-							transform: rotateY(180deg);
-				}
+				opacity: 0;
 			}
 		}
 	}
@@ -700,14 +693,20 @@ img{
 					animation-fill-mode: forwards;
 		}
 		.lightsix{
-			-webkit-animation: sceneshow .3s 5s ease;
-					animation: sceneshow .3s 5s ease;
+			-webkit-animation: sceneshow .3s 2s ease;
+					animation: sceneshow .3s 2s ease;
 			-webkit-animation-fill-mode: forwards;
 					animation-fill-mode: forwards;
 		}
 		.secentext{
 			-webkit-animation: leftflw .2s .1s ease;
 					animation: leftflw .2s .1s ease;
+			-webkit-animation-fill-mode: forwards;
+					animation-fill-mode: forwards;
+		}
+		.tishitext{
+			-webkit-animation: sceneshow .3s 1.5s ease;
+					animation: sceneshow .3s 1.5s ease;
 			-webkit-animation-fill-mode: forwards;
 					animation-fill-mode: forwards;
 		}

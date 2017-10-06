@@ -327,8 +327,8 @@ img {
   height: 5.24154589rem;
 }
 .section1 .active .textShowimg1 {
-  -webkit-animation: opacity 1s 2.5s ease;
-  animation: opacity 1s 2.5s ease;
+  -webkit-animation: opacity 1s 1.8s ease;
+  animation: opacity 1s 1.8s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -339,8 +339,8 @@ img {
   animation-fill-mode: forwards;
 }
 .section1 .active .textShowimg2 {
-  -webkit-animation: opacity 1s 2.5s ease;
-  animation: opacity 1s 2.5s ease;
+  -webkit-animation: opacity 1s 1.8s ease;
+  animation: opacity 1s 1.8s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -351,8 +351,8 @@ img {
   animation-fill-mode: forwards;
 }
 .section1 .active .textShowimg3 {
-  -webkit-animation: opacity 1s 2.5s ease;
-  animation: opacity 1s 2.5s ease;
+  -webkit-animation: opacity 1s 1.8s ease;
+  animation: opacity 1s 1.8s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -424,6 +424,20 @@ img {
   margin: auto;
   opacity: 0;
   background: url(../images/fingerprint.png) no-repeat center center / contain;
+}
+.section2 .sectContent .figerbgbor .figercontent .figerborder .figertext {
+  display: block;
+  width: 100%;
+  height: 0.9178744rem;
+  line-height: 0.9178744rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.72463768rem;
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+  opacity: 0.5;
+  letter-spacing: 0.1rem;
 }
 .section2 .sectContent .figerbgbor .figersuo {
   width: 8.62318841rem;
@@ -594,8 +608,8 @@ img {
   position: relative;
 }
 .section3 .sectContent .contentText .texthome .panoactive {
-  -webkit-animation: tahn .2s linear;
-  animation: tahn .2s linear;
+  -webkit-animation: tahn .2s 1.5s linear;
+  animation: tahn .2s 1.5s linear;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -650,28 +664,7 @@ img {
   bottom: 0.24154589rem;
   left: 0rem;
   z-index: 99;
-}
-.section3 .sectContent .contentText .lightelec {
-  width: 15.65217391rem;
-  height: 3.21256039rem;
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  bottom: 0rem;
-  left: 0rem;
-  margin: auto;
-}
-.section3 .sectContent .contentText .lightelec .leftele {
-  width: 50%;
-  height: 100%;
-  float: left;
-}
-.section3 .sectContent .contentText .lightelec .rightele {
-  width: 50%;
-  height: 100%;
-  float: left;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  opacity: 0;
 }
 .section3 .activeThree .lightright {
   -webkit-animation: lightshow .3s 1s ease,lightact .1s 1.2s ease infinite;
@@ -694,14 +687,20 @@ img {
   animation-fill-mode: forwards;
 }
 .section3 .activeThree .lightsix {
-  -webkit-animation: sceneshow .3s 5s ease;
-  animation: sceneshow .3s 5s ease;
+  -webkit-animation: sceneshow .3s 2s ease;
+  animation: sceneshow .3s 2s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .section3 .activeThree .secentext {
   -webkit-animation: leftflw .2s .1s ease;
   animation: leftflw .2s .1s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.section3 .activeThree .tishitext {
+  -webkit-animation: sceneshow .3s 1.5s ease;
+  animation: sceneshow .3s 1.5s ease;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }

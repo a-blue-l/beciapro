@@ -3,6 +3,20 @@
 		var jump,jump1,adddome;
 		var falgtwo = false;
 		var firstfalg = true;
+		// 控制音乐
+		var audio = document.getElementById('audio');
+		audio.play();
+		$('.musiclogo').on('touchstart',function(){
+			if (audio !== null) {
+				if (audio.paused) {
+					$('.musiclogo').addClass('musicact').find('img').attr('src','images/musiclogo.png');
+					audio.play();
+				} else {
+					$('.musiclogo').removeClass('musicact').find('img').attr('src','images/musiclogono.png');
+					audio.pause()
+				}
+			}
+		})
 		;(function(){
 			// 创新产品部分切割图片电流走向
 			var imgdots = 30;	
@@ -72,6 +86,12 @@
 				clearInterval(sectionT);
 			}
 		}
+		// 消除loading
+		var loadingT = setTimeout(function(){
+			clearTimeout(loadingT);
+			$('.loading').remove();
+		},0)
+		//配置fullpage
 		$('#fullpageId').fullpage({
 			//Navigation
 			menu: '#menu',
@@ -101,9 +121,6 @@
 			//Design
 			controlArrows: true,
 			verticalCentered: true,
-			// sectionsColor : ['#fff', 'red', 'blue', 'yellow'],//背景颜色
-			// paddingTop: '3em',//顶部距离
-			// paddingBottom: '10px',//底部距离
 			fixedElements: '#header, .footer',
 
 			//Custom selectors
@@ -211,28 +228,10 @@
 			$('.shareBg').hide();
 			return false;
 		})
-		// 控制音乐
-		var audio = document.getElementById('audio');
-		audio.play();
-		$('.musiclogo').on('touchstart',function(){
-			if (audio !== null) {
-				if (audio.paused) {
-					$('.musiclogo').addClass('musicact').find('img').attr('src','images/musiclogo.png');
-					audio.play();
-				} else {
-					$('.musiclogo').removeClass('musicact').find('img').attr('src','images/musiclogono.png');
-					audio.pause()
-				}
-			}
-		})
 		// 移除长按事件
 		$(document).bind('contextmenu', function(e) {
 		  e.preventDefault();
 		})
-		var loadingT = setTimeout(function(){
-			clearTimeout(loadingT);
-			$('.loading').remove();
-		},0)
 	})
 })(jQuery)
 
